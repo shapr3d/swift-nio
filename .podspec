@@ -1,32 +1,57 @@
-Pod::Spec.new do |s|
-  s.name = 'SwiftNIO'
-  s.version = '2.40.0'
-  s.license = { :type => 'Apache 2.0', :file => 'LICENSE.txt' }
-  s.summary = 'Event-driven network application framework for high performance protocol servers & clients, non-blocking.'
-  s.homepage = 'https://github.com/apple/swift-nio'
-  s.author = 'Apple Inc.'
-  s.source = { :git => 'https://github.com/apple/swift-nio.git', :tag => s.version.to_s }
-  s.documentation_url = 'https://apple.github.io/swift-nio/docs/current/NIO/index.html'
-  s.module_name = 'NIO'
-
-  s.swift_version = '5.4'
-  s.cocoapods_version = '>=1.6.0'
-  s.ios.deployment_target = '10.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '10.0'
-  s.watchos.deployment_target = '6.0'
-
-  s.source_files = 'Sources/NIO/**/*.{swift,c,h}'
-  
-  s.dependency 'SwiftNIOPosix', s.version.to_s 
-  s.dependency 'CNIOWindows', s.version.to_s 
-  s.dependency 'SwiftNIOCore', s.version.to_s 
-  s.dependency 'SwiftNIOEmbedded', s.version.to_s 
-  s.dependency 'CNIODarwin', s.version.to_s 
-  s.dependency 'SwiftNIOConcurrencyHelpers', s.version.to_s 
-  s.dependency 'CNIOLinux', s.version.to_s 
-  s.dependency 'CNIOAtomics', s.version.to_s 
-  s.dependency '_NIODataStructures', s.version.to_s
-  
-  
-end
+{
+  "name": "SwiftNIO",
+  "version": "2.40.0",
+  "license": {
+    "type": "Apache 2.0",
+    "file": "LICENSE.txt"
+  },
+  "summary": "Event-driven network application framework for high performance protocol servers & clients, non-blocking.",
+  "homepage": "https://github.com/apple/swift-nio",
+  "authors": "Apple Inc.",
+  "source": {
+    "git": "https://github.com/shapr3d/swift-nio.git",
+    "commit": "b99a928"
+  },
+  "documentation_url": "https://apple.github.io/swift-nio/docs/current/NIOCore/index.html",
+  "module_name": "NIO",
+  "swift_versions": "5.4",
+  "cocoapods_version": ">=1.6.0",
+  "platforms": {
+    "ios": "10.0",
+    "osx": "10.10",
+    "tvos": "10.0",
+    "watchos": "6.0",
+    "visionos": "1.0"
+  },
+  "source_files": "Sources/NIO/**/*.{swift,c,h}",
+  "dependencies": {
+    "CNIOWindows": [
+      "2.40.0"
+    ],
+    "CNIOLinux": [
+      "2.40.0"
+    ],
+    "SwiftNIOCore": [
+      "2.40.0"
+    ],
+    "_NIODataStructures": [
+      "2.40.0"
+    ],
+    "SwiftNIOPosix": [
+      "2.40.0"
+    ],
+    "CNIOAtomics": [
+      "2.40.0"
+    ],
+    "SwiftNIOEmbedded": [
+      "2.40.0"
+    ],
+    "SwiftNIOConcurrencyHelpers": [
+      "2.40.0"
+    ],
+    "CNIODarwin": [
+      "2.40.0"
+    ]
+  },
+  "swift_version": "5.4"
+}
